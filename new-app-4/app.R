@@ -12,17 +12,28 @@ library(plotly)
 library(timetk)
 
 # SCRIPTS ----
+source(here::here("00_themes/THEME_SPECIALIZED.R"))
 source(here::here("00_scripts/utilities.R"))
 
-# Data
+# DATA ----
 processed_data_tbl <- read_csv(here::here("00_data/bike_sales_data.csv"))
 processed_data_tbl
 
 # Chick weights investigated over three panels
 ui <- navbarPage(
-  title = "Sales Dashboard",
+  title = specialized_title,
+  # arrange the logo
+  tags$head(
+    tags$style(HTML(
+      "
+      .navbar-brand {
+      display: flex;
+      }
+      "
+    ))
+    ),
   collapsible = TRUE,
-  theme = bslib::bs_theme(),
+  theme = app_theme,
   tabPanel(
     title = "Main",
     grid_container(
