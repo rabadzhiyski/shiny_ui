@@ -9,10 +9,10 @@ library(shiny)
 TITLE        <- "Sales Dashboard"
 LOGO         <- "https://i.pinimg.com/originals/80/52/79/8052793a5b6cb4bc820c893e02035b27.jpg"
 
-FONT_HEADING <- "Changa One"
+FONT_HEADING <- "Roboto"
 FONT_BASE    <- "Helvetica Neue"
 PRIMARY      <- "black"
-SUCCESS      <- "#6ab5da"
+SUCCESS      <- "#0066FF"
 INFO         <- "#00F5FB"
 WARNING      <- "#ee9c0f"
 DANGER       <- "#f06698"
